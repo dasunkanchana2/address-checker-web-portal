@@ -1,0 +1,9 @@
+#container {
+    display: flex;
+    padding: 30px 30px;
+    margin-bottom: 20px;
+    background-color: purple;
+    color: white;
+    font-family: Arial;
+    font-size:x-large
+}

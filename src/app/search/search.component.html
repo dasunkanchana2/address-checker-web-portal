@@ -1,0 +1,14 @@
+<div id="container">
+    <div>AddressCheckerNZ</div>
+</div>
+
+<div id="searchbar">
+<mat-form-field appearance="outline" class="w-50">
+    <mat-label>Search any address</mat-label>
+    <input matInput 
+        #searchkeyword
+        (keyup)="getAddressesBySearchKey(searchkeyword.value)"
+        name="searchKey" id="searchKey" placeholder="Search any address">
+</mat-form-field>
+<mat-option *ngFor="let nzadd of nzaddList">{{ nzadd.FullAddress}}</mat-option>
+</div>
