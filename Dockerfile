@@ -1,8 +1,11 @@
-FROM node:22.0.0-alpine as angular
-WORKDIR /app
-COPY . .
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+
+RUN npm install -g @angular/cli
+
 RUN npm install
-RUN npm run build
-FROM httpd:alpine3.15
-#WORKDIR /usr/local/apache2/htdocs
-#COPY --from=angular /app/dist/basic1 .
+
+CMD ["ng", "serve", "--host", "0.0.0.0"]
